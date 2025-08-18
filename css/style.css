@@ -1,0 +1,158 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  /* マウスを乗せたときの透過 */
+  opacity: 0.7;
+}
+
+.container {
+  background: #050507;
+  color: #fff;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 6.25rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 100px 0;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 3.75rem;
+  font-weight: 200;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #fff;
+}
+
+.wrapper {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 2s;
+}
+
+.fadein.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+#mainvisual {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+#mainvisual img {
+  width: 33.3333333333vw;
+  height: 100vh;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#information {
+  margin-bottom: 140px;
+}
+#information .info-date-en {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+#information .info-time-en {
+  display: block;
+  font-size: 1.125rem;
+}
+#information .info-place {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 20px 0;
+}
+#information .info-date-ja {
+  font-size: 1.125rem;
+}
+
+#gallery .list li {
+  margin-bottom: 60px;
+}
+#gallery .list li img {
+  width: 48%;
+}
+#gallery .list li:nth-child(odd) {
+  text-align: left;
+}
+#gallery .list li:nth-child(even) {
+  text-align: right;
+}
+
+#access {
+  margin-bottom: 480px;
+  position: relative;
+  z-index: 20;
+}
+#access .place {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+#access .address {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+#access .contact {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+#access .btn {
+  font-size: 1.3rem;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px #fff;
+  padding: 20px 100px;
+  transition: 0.3s;
+}
+#access .btn:hover {
+  background-color: #050507;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/bg.jpg") center center repeat !important;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#contact {
+  z-index: 20;
+}/*# sourceMappingURL=style.css.map */

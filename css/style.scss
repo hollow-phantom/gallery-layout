@@ -1,0 +1,209 @@
+@charset 'UTF-8';
+
+html {
+    font-size: 100%;
+}
+
+body {
+    // background-color: #050507;
+    // color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    /* マウスを乗せたときの透過 */
+    opacity: 0.7;
+}
+
+
+
+
+// 
+// 共通クラス
+// 
+
+.container {
+    background: #050507;
+    color: #fff;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 6.25rem;
+    font-weight: 300;
+    // text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 100px 0;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 3.75rem;
+    font-weight: 200;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #fff;
+}
+
+.wrapper {
+    max-width: 800px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+// フェードイン効果
+.fadein {
+    // 初期値は透明、自身の高さの50%下に配置
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 2s;
+}
+
+// showクラス付与で表示しながら元の位置に移動
+.fadein.show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+// 
+// メインビジュアル
+// 
+#mainvisual {
+    display: flex;
+    justify-content: center;
+
+    // 拡大した際の横スクロールを隠す
+    overflow-x: hidden;
+
+    img {
+        // 初期値は画面の1/3、高さは画面高
+        width: calc(100vw/3);
+        height: 100vh;
+        // 拡大した時に(親要素に合わせて)縮めない
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+}
+
+// 
+// インフォメーション
+// 
+#information {
+    margin-bottom: 140px;
+
+    .info-date-en {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    .info-time-en {
+        display: block;
+        font-size: 1.125rem;
+    }
+
+    .info-place {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+
+    .info-date-ja {
+        font-size: 1.125rem;
+    }
+
+}
+
+// 
+// ギャラリー
+// 
+#gallery {
+    .list {
+        li {
+            margin-bottom: 60px;
+
+            img {
+                width: 48%;
+            }
+
+            &:nth-child(odd) {
+                text-align: left;
+            }
+
+            &:nth-child(even) {
+                text-align: right;
+            }
+        }
+    }
+}
+
+// 
+// アクセス
+// 
+#access {
+
+    margin-bottom: 480px;
+
+    // 背景画像より前面に表示する必要があるが、position:static(デフォルト)は
+    // z-indexが指定できないため、relativeを定義
+    position: relative;
+    z-index: 20;
+
+    .place {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .address {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+        display: inline-block;
+        cursor: pointer;
+        border: solid 1px #fff;
+        padding: 20px 100px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #050507;
+        }
+    }
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bg.jpg") center center repeat !important;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#contact {
+    z-index: 20;
+}
