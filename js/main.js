@@ -6,10 +6,17 @@ $(function () {
         //メインビジュアルの拡大・縮小
         mv_scale(scroll);
 
+        // 
+        // ロゴ、ハンバーガーメニューの表示
+        // 
+        if (scroll > 520 ) {
+            $(".logo").fadeIn(500);
+        } else {
+            $(".logo").fadeOut(500);
+        }
+
 
         let access_position = $('#access').offset().top - $(window).height();
-        // console.log(scroll);
-        // console.log(access_position);
 
         // 
         // Access背景画像表示
