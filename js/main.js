@@ -1,4 +1,9 @@
 $(function () {
+
+    $('.hamburger').click(function () {
+        $(this).toggleClass("open");
+    });
+
     //スクロールイベント
     $(window).scroll(function () {
         let scroll = $(this).scrollTop();
@@ -9,10 +14,12 @@ $(function () {
         // 
         // ロゴ、ハンバーガーメニューの表示
         // 
-        if (scroll > 520 ) {
+        if (scroll > 520) {
             $(".logo").fadeIn(500);
+            $(".hamburger").fadeIn(500);
         } else {
             $(".logo").fadeOut(500);
+            $(".hamburger").fadeOut(500);
         }
 
 

@@ -71,6 +71,41 @@ html a:hover {
 #header .logo a {
   display: block;
 }
+#header .hamburger {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 40;
+  display: none;
+}
+#header .hamburger span {
+  height: 1px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  left: 6px;
+  transition: 0.5s ease-in-out;
+}
+#header .hamburger span:nth-child(1) {
+  top: 11px;
+}
+#header .hamburger span:nth-child(2) {
+  top: 21px;
+}
+#header .hamburger span:nth-child(3) {
+  top: 31px;
+}
+#header .hamburger.open span:nth-child(1) {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+#header .hamburger.open span:nth-child(2), #header .hamburger.open span:nth-child(3) {
+  top: 21px;
+  transform: rotate(45deg);
+}
 
 #mainvisual {
   display: flex;
