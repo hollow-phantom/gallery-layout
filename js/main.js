@@ -1,7 +1,14 @@
 $(function () {
 
+    // 
     $('.hamburger').click(function () {
-        $(this).toggleClass("open");
+        hamburger();
+    });
+
+    // メニューのリンクをクリックした時
+    $('#navi a').on('click', function() {
+        // ハンバーガーメニューの共通処理を呼び出す
+        hamburger();
     });
 
     //スクロールイベント
@@ -70,4 +77,21 @@ const mv_scale = (scroll) => {
             'width': 100 - scroll / 10 + "%"
         });
     }
+}
+
+// 
+// ハンバーガーメニュークリック時の処理
+// 
+const hamburger = () => {
+  // toggleClassを使用することで、hamburgerクラスにactiveクラスが存在する場合は削除、
+  // 存在しない場合を追加する処理を自動で行ってくれる
+  $('.hamburger').toggleClass('active');
+
+  if ($('.hamburger').hasClass('active')) {
+    // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
+    $('#navi').addClass('active');
+  } else {
+    // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
+    $('#navi').removeClass('active');
+  }
 }
