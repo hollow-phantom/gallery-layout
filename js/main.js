@@ -6,7 +6,7 @@ $(function () {
     });
 
     // メニューのリンクをクリックした時
-    $('#navi a').on('click', function() {
+    $('#navi a').on('click', function () {
         // ハンバーガーメニューの共通処理を呼び出す
         hamburger();
     });
@@ -29,8 +29,28 @@ $(function () {
             $(".hamburger").fadeOut(500);
         }
 
-
+        // 
+        // サイドボタン表示
+        // 
+        // 画面下から#galleryまでの距離を取得
+        let gallery_position = $('#gallery').offset().top - $(window).height();
         let access_position = $('#access').offset().top - $(window).height();
+
+        // PC画面サイズのみ
+        if (window.innerWidth > 900) {
+            // ギャラリー手前まで到達したら表示
+            if (scroll > gallery_position) {
+                // アクセス手前まで到達したら非表示
+                if (scroll < access_position) {
+                    console.log("test");
+                    $('#side-btn').css({ 'transform': 'rotate(-90deg) translateY(0)' });
+                } else {
+                    $('#side-btn').css({ 'transform': 'rotate(-90deg) translateY(60px)' });
+                }
+            } else {
+                $('#side-btn').css({ 'transform': 'rotate(-90deg) translateY(60px)' });
+            }
+        }
 
         // 
         // Access背景画像表示
@@ -83,15 +103,15 @@ const mv_scale = (scroll) => {
 // ハンバーガーメニュークリック時の処理
 // 
 const hamburger = () => {
-  // toggleClassを使用することで、hamburgerクラスにactiveクラスが存在する場合は削除、
-  // 存在しない場合を追加する処理を自動で行ってくれる
-  $('.hamburger').toggleClass('active');
+    // toggleClassを使用することで、hamburgerクラスにactiveクラスが存在する場合は削除、
+    // 存在しない場合を追加する処理を自動で行ってくれる
+    $('.hamburger').toggleClass('active');
 
-  if ($('.hamburger').hasClass('active')) {
-    // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
-    $('#navi').addClass('active');
-  } else {
-    // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
-    $('#navi').removeClass('active');
-  }
+    if ($('.hamburger').hasClass('active')) {
+        // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
+        $('#navi').addClass('active');
+    } else {
+        // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
+        $('#navi').removeClass('active');
+    }
 }

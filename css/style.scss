@@ -100,10 +100,10 @@ html {
     // ナビゲーションメニュー
     //  
     #navi {
-        position:fixed;
-        top:0;
-        left:0;
-        width:100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
         // 一番上に来るように設定
         z-index: 30;
         text-align: center;
@@ -122,8 +122,8 @@ html {
                 padding: 10px 0;
 
                 a {
-                    display:block;
-                } 
+                    display: block;
+                }
             }
         }
     }
@@ -131,7 +131,6 @@ html {
     #navi.active {
         transform: translateY(0%);
     }
-
 
     // 
     // ハンバーガーメニュー
@@ -235,6 +234,37 @@ html {
         font-size: 1.125rem;
     }
 
+}
+
+// 
+// サイドボタン
+// 
+#side-btn {
+    border: solid 1px #fff;
+    position: fixed;
+    bottom: 200px;
+    right: -144px;
+    transform: rotate(-90deg) translateY(60px);
+    transition: 0.6s;
+    z-index: 30;
+
+    a {
+        width: 165px;
+        font-size: 1rem;
+        display: inline-block;
+        letter-spacing: 0.1em;
+        padding: 15px 0;
+        transition: 0.3s;
+
+        &:last-of-type {
+            border-left: solid 1px #fff;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+    }
 }
 
 // 
