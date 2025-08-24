@@ -214,15 +214,15 @@ html a:hover {
   margin-bottom: 20px;
 }
 #access .address {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 #access .contact {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 30px;
 }
 #access .btn {
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: inline-block;
   cursor: pointer;
   border: solid 1px #fff;
@@ -245,5 +245,35 @@ html a:hover {
 }
 
 #contact {
+  margin-bottom: 200px;
   z-index: 20;
+}
+#contact .btn {
+  display: block;
+  width: 400px;
+  margin: 0 auto 20px auto;
+  border: solid 1px #7d7d7d;
+  padding: 40px 40px;
+  position: relative;
+  transition: 0.3s;
+}
+#contact .btn::before, #contact .btn::after {
+  content: "";
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  transition: 0.3s;
+  right: -40px;
+}
+#contact .btn::before {
+  width: 120px;
+  top: 48px;
+}
+#contact .btn::after {
+  width: 15px;
+  top: 45px;
+  transform: rotate(25deg);
+}
+#contact .btn:hover::before, #contact .btn:hover::after {
+  right: -50px;
 }/*# sourceMappingURL=style.css.map */

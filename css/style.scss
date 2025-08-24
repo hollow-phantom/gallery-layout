@@ -309,17 +309,17 @@ html {
     }
 
     .address {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         margin-bottom: 20px;
     }
 
     .contact {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         margin-bottom: 30px;
     }
 
     .btn {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         display: inline-block;
         cursor: pointer;
         border: solid 1px #fff;
@@ -332,6 +332,9 @@ html {
     }
 }
 
+// 
+// 背景表示
+// 
 .bg {
     width: 100vw;
     height: 100vh;
@@ -343,6 +346,46 @@ html {
     z-index: 10;
 }
 
+// 
+// コンタクト
+// 
 #contact {
+    margin-bottom: 200px;
     z-index: 20;
+
+    .btn {
+        display: block;
+        width: 400px;
+        margin: 0 auto 20px auto;
+        border: solid 1px#7d7d7d;
+        padding: 40px 40px;
+        position: relative;
+        transition: 0.3s;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            transition: 0.3s;
+            right: -40px;
+        }
+
+        &::before {
+            width: 120px;
+            top: 48px;
+        }
+
+        &::after {
+            width: 15px;
+            top: 45px;
+            transform: rotate(25deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            right: -50px;
+        }
+    }
 }
