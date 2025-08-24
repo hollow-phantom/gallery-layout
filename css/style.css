@@ -3,6 +3,8 @@ html {
   font-size: 100%;
 }
 html body {
+  background-color: #050507;
+  color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
 }
@@ -276,4 +278,32 @@ html a:hover {
 }
 #contact .btn:hover::before, #contact .btn:hover::after {
   right: -50px;
+}
+
+#footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: solid 1px #fff;
+  font-size: 0.75rem;
+  padding: 80px 30px;
+  text-align: left;
+}
+#footer p {
+  line-height: 1.6;
+}
+#footer .sns {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+#footer .sns li {
+  margin-right: 15px;
+}
+#footer .copyright {
+  display: flex;
+  align-items: center;
+}
+#footer .copyright li:last-child {
+  margin-left: 30px;
 }/*# sourceMappingURL=style.css.map */

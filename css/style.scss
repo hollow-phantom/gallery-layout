@@ -7,8 +7,8 @@ html {
     font-size: 100%;
 
     body {
-        // background-color: #050507;
-        // color: #fff;
+        background-color: #050507;
+        color: #fff;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 300;
     }
@@ -386,6 +386,42 @@ html {
         &:hover::before,
         &:hover::after {
             right: -50px;
+        }
+    }
+}
+
+// 
+// フッター
+// 
+#footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: solid 1px #fff;
+    font-size: 0.75rem;
+    padding: 80px 30px;
+    text-align: left;
+
+    p {
+        line-height: 1.6;
+    }
+
+    .sns {
+        display: flex;
+        align-items:center;
+        margin-top: 30px;
+
+        li {
+            margin-right:15px;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        align-items:center;
+
+        li:last-child {
+            margin-left: 30px;
         }
     }
 }
