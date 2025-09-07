@@ -34,7 +34,7 @@ html a:hover {
   font-size: 6.25rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  margin-bottom: 100px 0;
+  margin-bottom: 100px;
 }
 
 .section-title {
@@ -306,4 +306,72 @@ html a:hover {
 }
 #footer .copyright li:last-child {
   margin-left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .site-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  #information {
+    margin-bottom: 80px;
+  }
+  #information .info-date-en {
+    font-size: 1rem;
+  }
+  #information .info-time-en {
+    font-size: 1rem;
+  }
+  #information .info-place {
+    font-size: 2rem;
+  }
+  #information .info-date-ja {
+    font-size: 1rem;
+  }
+  #gallery {
+    margin-bottom: 280px;
+  }
+  #gallery .list li {
+    margin-bottom: 30px;
+  }
+  #gallery .list li img {
+    width: 100%;
+  }
+  #access {
+    margin-bottom: 280px;
+  }
+  #access .place {
+    font-size: 1.6rem;
+  }
+  #access .address {
+    font-size: 0.9rem;
+  }
+  #access .contact {
+    font-size: 0.9rem;
+  }
+  #access .btn {
+    font-size: 0.9rem;
+    padding: 15px 80px;
+  }
+  #contact {
+    margin-bottom: 180px;
+  }
+  #contact .btn {
+    width: 90%;
+    padding: 30px 0;
+  }
+  #contact .btn::before, #contact .btn::after {
+    display: none;
+  }
+  #footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 30px;
+  }
+  #footer .sns {
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
