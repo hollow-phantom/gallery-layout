@@ -47,7 +47,7 @@ html {
     font-weight: 300;
     // text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 100px 0;
+    margin-bottom: 100px;
 }
 
 .section-title {
@@ -183,9 +183,6 @@ html {
         }
     }
 }
-
-
-
 
 // 
 // メインビジュアル
@@ -408,20 +405,124 @@ html {
 
     .sns {
         display: flex;
-        align-items:center;
+        align-items: center;
         margin-top: 30px;
 
         li {
-            margin-right:15px;
+            margin-right: 15px;
         }
     }
 
     .copyright {
         display: flex;
-        align-items:center;
+        align-items: center;
 
         li:last-child {
             margin-left: 30px;
+        }
+    }
+}
+
+// 
+//  レスポンシブ
+// 
+@media screen and (max-width: 900px) {
+
+    .site-title {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        // margin-bottom: 40px;
+    }
+
+    #information {
+        margin-bottom: 80px;
+
+        .info-date-en {
+            font-size: 1rem;
+        }
+
+        .info-time-en {
+            font-size: 1rem;
+        }
+
+        .info-place {
+            font-size: 2.0rem;
+            // font-weight: 400;
+            // margin: 20px 0;
+        }
+
+        .info-date-ja {
+            font-size: 1rem;
+        }
+
+    }
+
+    #gallery {
+        margin-bottom: 280px;
+
+        .list {
+            li {
+                margin-bottom: 30px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #access {
+
+        margin-bottom: 280px;
+
+        .place {
+            font-size: 1.6rem;
+            // font-weight: 300;
+            // margin-bottom: 20px;
+        }
+
+        .address {
+            font-size: 0.9rem;
+            // margin-bottom: 20px;
+        }
+
+        .contact {
+            font-size: 0.9rem;
+            // margin-bottom: 30px;
+        }
+
+        .btn {
+            font-size: 0.9rem;
+            padding: 15px 80px;
+        }
+    }
+
+    #contact {
+        margin-bottom: 180px;
+
+        .btn {
+            width: 90%;
+            // border: solid 1px#7d7d7d;
+            padding: 30px 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 30px;
+
+        .sns {
+            margin-bottom: 30px;
         }
     }
 }
